@@ -1,3 +1,4 @@
+@use './colors.sass'
 @import '@fontsource/fira-mono'
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap')
 
@@ -8,3 +9,7 @@
 :root
   font-family: 'Lexend', sans-serif
   background-color: #000
+
+p
+  color: colors.$primary
+  text-shadow: 0 0 10px colors.$primary
