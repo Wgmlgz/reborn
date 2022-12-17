@@ -1,11 +1,10 @@
 <script>
-  import Counter from './Counter.svelte';
   import welcome from '$lib/images/svelte-welcome.webp';
   import welcome_fallback from '$lib/images/svelte-welcome.png';
   import FloatBox from '$lib/components/float-box.svelte';
   import Frame from '$lib/components/frame.svelte';
   import Box from '$lib/components/box.svelte';
-    import Boot from '$lib/components/boot.svelte';
+  import Boot from '$lib/components/boot.svelte';
 
   let w = 500;
   let h = 100;
