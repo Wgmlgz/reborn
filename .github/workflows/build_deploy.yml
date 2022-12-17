@@ -29,7 +29,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'dist'
+          source-directory: 'build'
           destination-github-username: 'wgmlgz'
           destination-repository-name: 'wgmlgz.github.io'
           target-directory: 'reborn'

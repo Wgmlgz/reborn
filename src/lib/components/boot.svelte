@@ -1,4 +1,5 @@
-<script lang="ts">0.3
+<script lang="ts">
+  0.3;
   import Box from './box.svelte';
   import { css } from 'goober';
 
@@ -31,45 +32,25 @@
   const f = makeAnim('loading-f', (p) => (p < 0.5 ? '[ SYSTEM REBOOT ]' : ''));
 
   const g = makeAnim('loading-g', (p) => (p > 0.7 ? '< WGMLGZ_ >' : ''));
-
-  let show = true;
-
-  let sus = [];
-  const click = () => {
-    console.log('sus');
-    show = false;
-    setTimeout(() => {
-      show = true;
-    }, 0);
-  };
-
-  let title = 'abobus';
 </script>
 
-<div class="grid">
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div class="grid h-screen" on:click={click}>
-    {#if show}
-      <Box class="p-10 m-auto">
-        <div class="frame ">
-          <div class="absolute grid justify-items-center">
-            <div class="grid justify-items-center gap-2 w-[700px] -mx-[50%]">
-              <p class="{f} text-4xl mt-7" />
-              <p class="{g} text-8xl -mt-7" style="content: 'sus'" />
-              <p class={c} />
-              <div class="flex font-mono text-2xl">
-                <p class={d} />
-                <p class={a} />
-                <p class="text-white {b}" />
-                <p class={e} />
-              </div>
-            </div>
-          </div>
+<Box class="p-10 m-auto">
+  <div class="frame text-white">
+    <div class="absolute grid justify-items-center">
+      <div class="grid justify-items-center gap-2 w-[700px] -mx-[50%]">
+        <p class="{f} text-4xl mt-7" />
+        <p class="{g} text-8xl -mt-7" style="content: 'sus'" />
+        <p class={c} />
+        <div class="flex font-mono text-2xl">
+          <p class={d} />
+          <p class={a} />
+          <p class="text-white {b}" />
+          <p class={e} />
         </div>
-      </Box>
-    {/if}
+      </div>
+    </div>
   </div>
-</div>
+</Box>
 
 <style lang="scss">
   @use '$lib/styles/colors.sass';
@@ -111,6 +92,4 @@
   div {
     // animation: border-flicker 1s linear infinite;
   }
-
-
 </style>

@@ -11,5 +11,20 @@
   background-color: #000
 
 p
-  color: colors.$primary
-  text-shadow: 0 0 10px colors.$primary
+  color: #fff
+  text-shadow: 0 0 10px #fff
+
+html, body
+  max-width: 100%
+  overflow-x: hidden
+
+$select: #000
+$select-back: #fff
+
+::-moz-selection
+  color: $select
+  background: yellow
+
+::selection
+  color: $select
+  background: $select-back
